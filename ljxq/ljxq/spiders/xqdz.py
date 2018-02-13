@@ -9,7 +9,7 @@ class XqdzSpider(scrapy.Spider):
     #              'https://sh.lianjia.com/xiaoqu/pg1scro11/']
 
     def parse(self, response):
-        yield scrapy.Request(response.url, callback=self.parse_next)
+        #yield scrapy.Request(response.url, callback=self.parse_next)
 
         house_page = '//ul[@class="listContent"]/li/div[1]/div[1]/a'
         for info in response.xpath(house_page):
