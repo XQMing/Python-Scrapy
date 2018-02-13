@@ -10,6 +10,7 @@ class XqdzSpider(scrapy.Spider):
 
     def parse(self, response):
         #yield scrapy.Request(response.url, callback=self.parse_next)
+#
         house_page = '//ul[@class="listContent"]/li/div[1]/div[1]/a'
         for info in response.xpath(house_page):
             house_page_href = info.xpath('@href').extract()[0]
